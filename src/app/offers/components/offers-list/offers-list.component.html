@@ -1,0 +1,11 @@
+<div>
+<h2>Offers</h2>
+
+<a *ngIf="hasPermissions" routerLink="/main/offers/edit">Add new</a>
+
+    <section>
+       <app-offer-item *ngFor="let offer of offers"
+        [offer]="offer" 
+        (deleteClicked)="onDelete($event)"></app-offer-item>
+    </section>
+</div>
